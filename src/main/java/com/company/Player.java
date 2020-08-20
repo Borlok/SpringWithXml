@@ -1,13 +1,29 @@
 package com.company;
 
-public class Player {
-    private Music music;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-    public Player(Music music) {
-        this.music = music;
-    }
+@Component
+public class Player {
+    @Autowired
+    @Qualifier("classical")
+    private Music music;
+    @Value("${variable.volume}")
+    private int volume;
+    @Value("${variable.name}")
+    private String name;
 
     public void playMusic() {
         music.play();
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public String getName() {
+        return name;
     }
 }
