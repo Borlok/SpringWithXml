@@ -16,13 +16,4 @@ class = "com.company.Player">
 <constructor-arg ref = "MusicBean" />
 </bean>
 
-<!--     <bean id="musicBean" -->
-<!--           class="ru.alishev.springcourse.ClassicalMusic"> -->
-<!--     </bean> -->
-
-<!--     <bean id="musicPlayer" -->
-<!--           class="ru.alishev.springcourse.MusicPlayer"> -->
-<!--         <constructor-arg ref="musicBean"/> -->
-<!--     </bean> -->
-
 </beans>
